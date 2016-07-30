@@ -1,0 +1,59 @@
+﻿Version=5.02
+NumberOfModules=2
+Module1=IMEITracker
+Module2=BalanceTracker
+Build1=Default,com.myanmarunicorn.ooredootracker
+ManifestCode='This code will be applied to the manifest file during compilation.~\n~'You do not need to modify it in most cases.~\n~'See this link for for more information: http://www.b4x.com/forum/showthread.php?p=78136~\n~AddManifestText(~\n~<uses-sdk android:minSdkVersion="5" android:targetSdkVersion="14"/>~\n~<supports-screens android:largeScreens="true" ~\n~    android:normalScreens="true" ~\n~    android:smallScreens="true" ~\n~    android:anyDensity="true"/>)~\n~SetApplicationAttribute(android:icon, "@drawable/icon")~\n~SetApplicationAttribute(android:label, "$LABEL$")~\n~SetApplicationAttribute(android:theme, "@android:style/Theme.Holo.Light.DarkActionBar")~\n~'End of default text.~\n~
+IconFile=
+NumberOfFiles=3
+File1=BalanceTracker.bal
+File2=IMEITracker.bal
+File3=Main.bal
+NumberOfLibraries=4
+Library1=core
+Library2=httputils2
+Library3=json
+Library4=javaobject
+@EndOfDesignText@
+#Region  Project Attributes 
+	#ApplicationLabel: Ooredoo Tracker
+	#VersionCode: 1
+	#VersionName: 1.0
+	#SupportedOrientations: portrait
+	#CanInstallToExternalStorage: False
+	#AdditionalJar: java-json
+#End Region
+
+#Region  Activity Attributes 
+	#FullScreen: False
+	#IncludeTitle: True
+#End Region
+
+Sub Process_Globals
+
+End Sub
+
+Sub Globals
+
+End Sub
+
+Sub Activity_Create(FirstTime As Boolean)
+	Activity.LoadLayout("Main")
+End Sub
+
+Sub Activity_Resume
+
+End Sub
+
+Sub Activity_Pause (UserClosed As Boolean)
+
+End Sub
+
+Sub btnIMEITracker_Click
+	StartActivity(IMEITracker)
+End Sub
+
+
+Sub btnBalanceTracker_Click
+	StartActivity(BalanceTracker)
+End Sub
